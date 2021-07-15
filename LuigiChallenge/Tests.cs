@@ -5,7 +5,7 @@ namespace LuigiChallenge
 {
     public class LuigiTest
     {
-
+       
         private static int[][] map1 = new int[][]{
                                                new int[] { 7, 0, 2, 5, 3 },
                                                new int[] { 5, 0, 0, 0, 2 },
@@ -42,10 +42,10 @@ namespace LuigiChallenge
         {
             //Arrange
             var luigi = new Luigi();
+             
+                //Act
 
-            //Act
-
-            var actual = luigi.GoHome2D(map2);
+                var actual = luigi.GoHome2D(map2);
 
             //Assert
             Assert.Equal(expected, actual);

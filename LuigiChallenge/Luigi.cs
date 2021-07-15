@@ -1,10 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace LuigiChallenge
 {
     public class Luigi
     {
+        private IEnumerable<int> map1;
+
         public Luigi()
         {
+           //foreach (int i in map1)
+            //{
+               // if(i != 0)
+                //{
+                 //   return "Right";
+                //}
+            //}
         }
 
 
@@ -13,6 +24,12 @@ namespace LuigiChallenge
 //Give him directions with two commands:
 
 //"Down" or "Right";
+
+            
+
+        
+
+
 
 //Example:
 //input:
@@ -31,7 +48,42 @@ namespace LuigiChallenge
 
         public string GoHome2D(int[][] map)
         {
-            throw new NotImplementedException();
+            int count2 = 0;
+            string Result = "";
+            foreach(int[] zero in map )
+            {
+                count2++;
+                
+                int count = 0;
+                foreach (var z in zero)
+                {
+                    
+                    
+                    if(z == 0)
+                    {
+                        count++;
+                        
+                    }
+                    if(count > 1 && z == 0)
+                    {
+                        Result += "Right ";
+                    }
+                }
+                if(count2 < map.Length)
+                {
+                    Result += "Down ";
+                }
+                
+            }
+//foreach(int[] otherNum in map)
+            //{
+            //foreach(var o in otherNum)
+               // {
+                    //Result += "Down ";
+                //}
+                
+            //
+            return Result.Trim();
         }
     }
 }
